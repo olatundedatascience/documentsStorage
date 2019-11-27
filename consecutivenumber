@@ -1,0 +1,48 @@
+function range(start=1, end=4){
+    numbers = "";
+    for(var i=end;i>=start;i--){
+        numbers += i
+
+    }
+
+    return numbers
+}
+
+
+function isConsecutive(numbers=3421){
+    _numbers = (""+numbers).split("-")
+    start = _numbers[0]
+    end = _numbers[1]
+
+    consective=[];
+
+    if(end > start){
+        for(var i=0;i<=_numbers.length;i++){
+            var current = i;
+            var next = (i+1) > numbers.length ? ((i+1)-1):(i+1)
+            if(current > next){
+                consectiv.push(current)
+                console.log(consective)
+            }
+        }
+    }
+    else {
+        if(start > end){
+            for(var i=0;i<=_numbers.length;i++){
+                var current = i;
+            var next = (i+1) > numbers.length ? ((i+1)-1):(i+1)
+            if(current > next){
+                    consectiv.push(current)
+                    console.log(consective)
+                }
+            }
+        }
+    }
+
+    console.log(consective)
+
+    return consective.length > 0 && consectiv.length == numbers.length
+
+}
+
+console.log(isConsecutive(5-4-3-2-1))
