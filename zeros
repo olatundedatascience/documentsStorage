@@ -1,0 +1,36 @@
+function factorial(number = 5){
+    var result =1;
+
+    for(var i=1;i<=number;i++){
+        result = result * i;
+    }
+
+    return result;
+}
+
+function countTrailingZeros(number=120){
+    var _numbers = (""+number).split("")
+    zeros =[]
+//console.log(_numbers)
+
+_numbers.forEach((v)=>{
+    if(v ==0) {
+        zeros.push(v)
+    }
+})
+
+/*
+    for(var i=1;i<=_numbers.length;i++){
+        var current = parseInt(i)
+        if(i < 1 || i == 0){
+           console.log(i)
+            zeros.push(i)
+        }
+    }
+    */
+
+    return zeros.length
+}
+
+
+console.log(countTrailingZeros(3))
